@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+    @keyframes fadeIn {
+        from {
+        opacity: 0;
+        transform: translateY(20px);
+        }
+        to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    }
+
+    .fade-in {
+        animation: fadeIn 1.5s ease-out forwards;
+    }
+    </style>
+
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stanchion Energy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  </head>
+  <body class="text-white bg-gray-950">
+
+    <!-- ✅ NAVBAR -->
+    <header class="bg-black bg-opacity-80 fixed w-full z-50">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <img src="./assets/logo.png" alt="Stanchion Logo" class="h-20 w-auto" />
+          <span class="font-bold text-yellow-500 text-lg hidden sm:inline"></span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="#" class="hover:text-orange-500 transition">Home</a>
+          <a href="about.html" class="hover:text-orange-500 transition">About</a>
+          <a href="services.html" class="hover:text-orange-500 transition">Services</a>
+          <a href="contact.html" class="hover:text-orange-500 transition">Contact</a>
+        </nav>
+
+    <!-- Get Quote Button -->
+<button onclick="toggleQuoteModal(true)"
+    class="px-5 py-3 bg-orange-500 text-white rounded-lg shadow hover:bg-orange-400 transition w-full sm:w-auto">
+    Get a Quote
+</button>
+
+<!-- Modal Background -->
+<div id="quoteModal"
+    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden p-4 overflow-y-auto">
+    <!-- Modal Content -->
+    <div class="bg-white rounded-lg w-full max-w-lg p-4 sm:p-6 relative shadow-lg">
+        
+        <!-- Header with Close Button -->
+        <div class="flex items-center justify-between mb-4">
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-800">Request a Quote</h2>
+            <button onclick="toggleQuoteModal(false)" 
+                class="text-gray-500 hover:text-gray-800 text-2xl leading-none p-1 rounded-full hover:bg-gray-100">
+                ✖
+            </button>
+        </div>
+
+        <p class="text-gray-600 mb-5 text-sm sm:text-base">
+            Fill in your details and we'll get back to you with a tailored quote.
+        </p>
+
+        <!-- Quote Form -->
+        <form id="quoteForm" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Full Name</label>
+                <input type="text" name="name" required
+                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" name="email" required
+                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Phone</label>
+                <input type="tel" name="phone"
+                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Service Interested In</label>
+                <select name="service" required
+                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm">
+                    <option value="">Select a service</option>
+                    <option>LPG Distribution</option>
+                    <option>Solar EPC</option>
+                    <option>Geothermal Exploration</option>
+                    <option>Responsible Mining</option>
+                    <option>Hybrid & Biofuel Solutions</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Additional Details</label>
+                <textarea name="message" rows="4"
+                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"></textarea>
+            </div>
+
+            <button type="submit"
+                class="w-full py-3 bg-orange-500 text-white rounded-lg shadow hover:bg-orange-400 transition text-sm sm:text-base">
+                Submit Request
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+function toggleQuoteModal(show) {
+    document.getElementById('quoteModal').classList.toggle('hidden', !show);
+}
+
+document.getElementById('quoteForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Quote request submitted successfully! We will contact you soon.');
+    toggleQuoteModal(false);
+});
+</script>
+
+
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="focus:outline-none">
+            <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+        <a href="#" class="block py-2 text-white hover:text-orange-500">Home</a>
+        <a href="about.html" class="block py-2 text-white hover:text-orange-500">About</a>
+        <a href="services.html" class="block py-2 text-white hover:text-orange-500">Services</a>
+        <a href="contact.html" class="block py-2 text-white hover:text-orange-500">Contact</a>
+        <button class="w-full mt-3 bg-orange-500 text-white py-2 rounded hover:bg-yellow-400 transition">
+          Get Quote
+        </button>
+      </div>
+    </header>
+
+ <!-- ✅ HERO SECTION -->
+<section class="pt-24 h-screen bg-cover bg-center relative" style="background-image: url('./assets/.jpg');">
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  <div class="relative z-10 max-w-4xl mx-auto text-center px-6 py-20">
+    <h2 class="text-3xl md:text-6xl mt-12 font-bold text-gray-300 fade-in">
+  <span class="text-orange-500"> Powering</span> Growth in Energy & Mining
+</h2>
+
+    <p class="text-lg md:text-xl mt-6 mb-8 max-w-2xl mx-auto text-gray-300">
+      Stanchion Energy Limited -  since 2013.
+    </p>
+    <a href="learn-more.html" class="inline-block px-6 py-3 bg-orange-500 text-black font-semibold rounded-full hover:bg-orange-400 transition">
+      Learn More
+    </a>
+  </div>
+
+
+      <script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+    </section>
+
+    <section class="bg-white py-16 px-6 text-center">
+  <h3 class="text-3xl font-bold text-gray-800 mb-4">Who We Are</h3>
+  <p class="text-gray-600 max-w-3xl mx-auto">
+    Stanchion Energy is a leader in sustainable energy and mining solutions, dedicated to powering Africa's growth through innovation and responsible development.
+  </p>
+</section>
+
+
+    <section id="projects" class="bg-gray-950 py-20 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h3 class="text-3xl font-bold mb-10 text-orange-500">Featured Projects</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-orange-600 rounded-lg p-4 shadow hover:shadow-xl transition">
+        <img src="assets/solar.jpg" alt="Solar Farm" class="rounded mb-4">
+        <h4 class="text-white font-semibold text-lg">Solar Power Plant</h4>
+        <p class="text-white text-sm mt-1">Lagos, Nigeria – 5MW solar installation powering 200+ homes.</p>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-4 shadow hover:shadow-xl transition">
+        <img src="assets/project2.jpg" alt="Mining Site" class="rounded mb-4">
+        <h4 class="text-white font-semibold text-lg">Gold Mining Initiative</h4>
+        <p class="text-gray-400 text-sm mt-1">Kano State – Environmentally safe extraction processes.</p>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-4 shadow hover:shadow-xl transition">
+        <img src="assets/project3.jpg" alt="Wind turbines" class="rounded mb-4">
+        <h4 class="text-white font-semibold text-lg">Wind Farm Design</h4>
+        <p class="text-gray-400 text-sm mt-1">Jos Plateau – Hybrid wind-energy feasibility consulting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- CORE VALUES -->
+<section class="bg-gray-100 py-20 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h3 class="text-3xl font-bold text-gray-800 mb-12">Core Values</h3>
+
+    <!-- Row 1 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
+      <div class="p-6 bg-white rounded shadow text-center">
+        <h4 class="text-xl font-semibold text-orange-500 mb-2">Sustainability</h4>
+        <p class="text-gray-600 text-sm">We commit to environmentally responsible practices by driving clean energy adoption and eco-conscious mining to secure Nigeria’s long-term ecological and economic future.</p>
+      </div>
+      <div class="p-6 bg-white rounded shadow text-center">
+        <h4 class="text-xl font-semibold text-orange-500 mb-2">Integrity</h4>
+        <p class="text-gray-600 text-sm">We operate with transparency, accountability, and full regulatory compliance, ensuring every decision builds trust with stakeholders, communities, and partners.</p>
+      </div>
+      <div class="p-6 bg-white rounded shadow text-center">
+        <h4 class="text-xl font-semibold text-orange-500 mb-2">Community Engagement</h4>
+        <p class="text-gray-600 text-sm">We invest in people and places—creating jobs, supporting infrastructure, and promoting inclusive growth in every host community we operate in.</p>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="p-6 bg-white rounded shadow text-center">
+        <h4 class="text-xl font-semibold text-orange-500 mb-2">Innovation</h4>
+        <p class="text-gray-600 text-sm">We pioneer cutting-edge energy solutions and mining technologies to meet Africa’s evolving resource demands with efficiency, agility, and foresight.</p>
+      </div>
+      <div class="p-6 bg-white rounded shadow text-center">
+        <h4 class="text-xl font-semibold text-orange-500 mb-2">Safety</h4>
+        <p class="text-gray-600 text-sm">We uphold uncompromising health, safety, and environmental standards to protect lives, assets, and the ecosystems in which we work.</p>
+      </div>
+      <div class="p-6 bg-white rounded shadow text-center">
+        <h4 class="text-xl font-semibold text-orange-500 mb-2">Strategic Partnerships</h4>
+        <p class="text-gray-600 text-sm">We collaborate with clients, government, and communities to co-create lasting value and shared success across all our projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="bg-black py-20 px-6">
+  <div class="max-w-4xl mx-auto text-center">
+    <h3 class="text-3xl font-bold text-orange-500 mb-6">Get In Touch</h3>
+    <p class="text-gray-300 mb-10">Let’s talk about how Stanchion Energy can power your business.</p>
+    <form class="grid md:grid-cols-2 gap-6">
+      <input type="text" placeholder="Your Name" class="p-3 rounded bg-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-yellow-500">
+      <input type="email" placeholder="Your Email" class="p-3 rounded bg-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-yellow-500">
+      <textarea placeholder="Your Message" rows="4" class="p-3 md:col-span-2 rounded bg-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+      <button type="submit" class="md:col-span-2 bg-orange-500 text-black py-3 px-6 rounded hover:bg-yellow-600 transition font-semibold">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+<footer class="bg-gray-950 text-gray-400 py-10 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+    <div>
+      <h4 class="text-orange-500 font-bold text-xl mb-2">Stanchion Energy Ltd</h4>
+      <p>more sustainable Africa.</p>
+    </div>
+    <div>
+      <h4 class="text-orange-500 font-semibold mb-2">Quick Links</h4>
+      <ul class="space-y-1">
+        <li><a href="about.html" class="hover:text-white">About Us</a></li>
+        <li><a href="services.html" class="hover:text-white">Services</a></li>
+        <li><a href="projects.html" class="hover:text-white">Projects</a></li>
+        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-orange-500 font-semibold mb-2">Contact Info</h4>
+      <p>Email: info@stanchionenergy.com</p>
+      <p>Phone: +234906 949 0373</p>
+    </div>
+  </div>
+  <div class="text-center mt-10 text-sm border-t border-gray-800 pt-4">
+    © 2025 Stanchion Energy Ltd. All rights reserved.
+  </div>
+</footer>
+
+
+  </body>
+</html>

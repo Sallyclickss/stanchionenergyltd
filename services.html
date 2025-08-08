@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services | Stanchion Energy</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- ✅ OUR SERVICES HEADER -->
+<section class="relative bg-black text-white py-20 overflow-hidden">
+  <!-- Tiny scattered logos -->
+  <img src="./assets/logo.png" class="absolute top-10 left-10 w-15 opacity-20 animate-pulse" alt="Decor logo" />
+  <img src="./assets/logo.png" class="absolute top-20 right-20 w-15 opacity-10 animate-pulse" alt="Decor logo" />
+  <img src="./assets/logo.png" class="absolute bottom-10 left-1/3 w-15 opacity-15 animate-pulse" alt="Decor logo" />
+  <img src="./assets/logo.png" class="absolute bottom-20 right-16 w-14 opacity-25 animate-pulse" alt="Decor logo" />
+  <!--<img src="./assets/logo.png" class="absolute bottom-20 right-16 w-8 opacity-25 animate-bounce" alt="Decor logo" />-->
+
+  <!-- Back Arrow -->
+  <div class="absolute top-6 left-4 md:left-8">
+    <a href="index.html" class="flex items-center space-x-1 text-orange-500 hover:text-orange-300 transition">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+      <span class="text-sm">Back</span>
+    </a>
+  </div>
+
+  <!-- Title -->
+  <div class="relative z-10 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-orange-500 mb-4 tracking-wide">
+      Our Services
+    </h1>
+    <p class="text-gray-300 max-w-2xl mx-auto text-lg">
+      Delivering excellence across energy, mining, and sustainable infrastructure.
+    </p>
+  </div>
+</section>
+
+
+  <!-- SERVICES -->
+  <section class="py-20 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-orange-500 mb-12">Our Core Services</h2>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <div data-aos="fade-up" class="bg-white p-6 rounded-xl shadow border text-center hover:shadow-lg">
+        <div class="text-orange-500 mb-4 flex justify-center">
+          <i data-lucide="sun" class="w-10 h-10"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Renewable Energy</h3>
+        <p>Solar, wind, and hybrid energy projects powering communities.</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-6 rounded-xl shadow border text-center hover:shadow-lg">
+        <div class="text-orange-500 mb-4 flex justify-center">
+          <i data-lucide="pickaxe" class="w-10 h-10"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Mining & Resources</h3>
+        <p>Sustainable and ethical mineral extraction and processing.</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-6 rounded-xl shadow border text-center hover:shadow-lg">
+        <div class="text-orange-500 mb-4 flex justify-center">
+          <i data-lucide="leaf" class="w-10 h-10"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Sustainability Consulting</h3>
+        <p>Helping clients meet ESG targets and sustainability goals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES SERVED -->
+  <section class="py-20 bg-gray-100 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-orange-500 mb-12">Industries We Serve</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="flex flex-col items-center" data-aos="fade-up">
+          <i data-lucide="flame" class="w-8 h-8 text-orange-500 mb-2"></i>
+          <span class="font-medium">Oil & Gas</span>
+        </div>
+        <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+          <i data-lucide="hard-hat" class="w-8 h-8 text-orange-500 mb-2"></i>
+          <span class="font-medium">Mining</span>
+        </div>
+        <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+          <i data-lucide="wheat" class="w-8 h-8 text-orange-500 mb-2"></i>
+          <span class="font-medium">Agriculture</span>
+        </div>
+        <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+          <i data-lucide="factory" class="w-8 h-8 text-orange-500 mb-2"></i>
+          <span class="font-medium">Manufacturing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section class="py-20 bg-gray-300 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-orange-500 mb-10">Client Testimonials</h2>
+
+      <div class="space-y-8">
+        <div data-aos="fade-up" class="bg-white p-6 rounded-xl shadow">
+          <p class="text-gray-600 italic">"Stanchion Energy’s solar implementation was seamless and professional. Our energy costs dropped by 40% in 3 months!"</p>
+          <p class="mt-4 font-semibold text-orange-500">— Grace A., Lagos</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="150" class="bg-white p-6 rounded-xl shadow">
+          <p class="text-gray-600 italic">"Their mining consultancy helped us scale efficiently with minimal environmental impact."</p>
+          <p class="mt-4 font-semibold text-orange-500">— Kwame D., Accra</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- START A PROJECT CTA -->
+  <section class="py-20 bg-white px-6">
+    <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
+      <h2 class="text-3xl font-bold text-orange-500 mb-6">Start Your Next Project with Us</h2>
+      <p class="text-gray-600 mb-6">Let’s work together to create a cleaner, more resource-efficient future for Africa.</p>
+      <a href="#project-form" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full font-semibold shadow hover:bg-orange-600 transition">Request a Proposal</a>
+    </div>
+  </section>
+
+<section id="project-form" class="py-20 bg-gray-50 px-6">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold text-center text-orange-500 mb-8">Project Request Form</h2>
+
+    <form id="contactForm" class="space-y-6">
+      <input type="text" name="name" placeholder="Your Full Name" required class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" />
+      <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" />
+      <input type="text" name="company" placeholder="Company Name (if applicable)" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" />
+      <textarea name="message" rows="5" placeholder="Describe Your Project" required class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+
+      <button id="submitBtn" type="submit" class="bg-orange-500 text-white px-6 py-3 rounded-md hover:bg-orange-600 transition w-full flex items-center justify-center gap-2">
+        <span>Submit Request</span>
+        <svg id="spinner" class="hidden w-5 h-5 animate-spin text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+        </svg>
+      </button>
+
+      <p id="successMsg" class="text-green-600 font-semibold text-center hidden">✅ Your request has been sent!</p>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const btn = document.getElementById('submitBtn');
+    const spinner = document.getElementById('spinner');
+    const successMsg = document.getElementById('successMsg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      btn.disabled = true;
+      spinner.classList.remove('hidden');
+
+      const formData = new FormData(form);
+
+      // You can connect this to Formspree / EmailJS
+      await fetch('https://formspree.io/f/your_form_id', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        }
+      });
+
+      spinner.classList.add('hidden');
+      btn.disabled = false;
+      successMsg.classList.remove('hidden');
+      form.reset();
+    });
+  </script>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer class="text-center py-8 text-sm text-gray-500 bg-white">
+    &copy; 2025 Stanchion Energy Ltd. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+</body>
+</html>
