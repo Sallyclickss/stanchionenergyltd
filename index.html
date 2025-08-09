@@ -63,16 +63,20 @@
         </div>
       </div>
 
-      <!-- Mobile Menu Dropdown -->
-      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-        <a href="#" class="block py-2 text-white hover:text-orange-500">Home</a>
-        <a href="about.html" class="block py-2 text-white hover:text-orange-500">About</a>
-        <a href="services.html" class="block py-2 text-white hover:text-orange-500">Services</a>
-        <a href="contact.html" class="block py-2 text-white hover:text-orange-500">Contact</a>
-        <button class="w-full mt-3 bg-orange-500 text-white py-2 rounded hover:bg-yellow-400 transition">
-          Get Quote
-        </button>
-      </div>
+   <!-- Mobile Menu Dropdown -->
+<div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+  <a href="#" class="block py-2 text-white hover:text-orange-500">Home</a>
+  <a href="about.html" class="block py-2 text-white hover:text-orange-500">About</a>
+  <a href="services.html" class="block py-2 text-white hover:text-orange-500">Services</a>
+  <a href="contact.html" class="block py-2 text-white hover:text-orange-500">Contact</a>
+
+  <!-- FIX: added onclick so it works like desktop version -->
+  <button onclick="toggleQuoteModal(true)" 
+    class="w-full mt-3 bg-orange-500 text-white py-2 rounded hover:bg-yellow-400 transition">
+    Get Quote
+  </button>
+</div>
+
     </header>
 
 <!-- Modal Background -->
@@ -97,36 +101,38 @@
         <!-- Quote Form -->
         <form id="quoteForm" class="space-y-4">
             <div>
-                <label class="block text-sm font-medium text-gray-700">Full Name</label>
+                <label class="block text-sm font-medium text-gray-950">Full Name</label>
                 <input type="text" name="name" required
-                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm">
+                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
             </div>
             <div>
-                <label class="block text-sm font-medium text-gray-700">Email</label>
+                <label class="block text-sm font-medium text-gray-950">Email</label>
                 <input type="email" name="email" required
-                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm">
+                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
             </div>
             <div>
-                <label class="block text-sm font-medium text-gray-700">Phone</label>
+                <label class="block text-sm font-medium text-gray-950">Phone</label>
                 <input type="tel" name="phone"
-                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm">
+                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
             </div>
             <div>
-                <label class="block text-sm font-medium text-gray-700">Service Interested In</label>
-                <select name="service" required
-                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm">
-                    <option value="">Select a service</option>
-                    <option>LPG Distribution</option>
-                    <option>Solar EPC</option>
-                    <option>Geothermal Exploration</option>
-                    <option>Responsible Mining</option>
-                    <option>Hybrid & Biofuel Solutions</option>
-                </select>
+            <label class="block text-sm font-medium text-gray-950">Service Interested In</label>
+            <select name="service" required
+                class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-700 text-sm text-gray-900">
+                <option value="">Select a service</option>
+                <option>LPG Distribution</option>
+                <option>Solar EPC</option>
+                <option>Geothermal Exploration</option>
+                <option>Responsible Mining</option>
+                <option>Hybrid & Biofuel Solutions</option>
+            </select>
+
+
             </div>
             <div>
-                <label class="block text-sm font-medium text-gray-700">Additional Details</label>
+                <label class="block text-sm font-medium text-gray-950">Additional Details</label>
                 <textarea name="message" rows="4"
-                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"></textarea>
+                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm"></textarea>
             </div>
 
             <button type="submit"
