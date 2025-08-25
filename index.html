@@ -98,49 +98,57 @@
             Fill in your details and we'll get back to you with a tailored quote.
         </p>
 
-        <!-- Quote Form -->
-        <form id="quoteForm" class="space-y-4">
-            <div>
-                <label class="block text-sm font-medium text-gray-950">Full Name</label>
-                <input type="text" name="name" required
-                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-gray-950">Email</label>
-                <input type="email" name="email" required
-                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-gray-950">Phone</label>
-                <input type="tel" name="phone"
-                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
-            </div>
-            <div>
-            <label class="block text-sm font-medium text-gray-950">Service Interested In</label>
-            <select name="service" required
-                class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-700 text-sm text-gray-900">
-                <option value="">Select a service</option>
-                <option>LPG Distribution</option>
-                <option>Solar EPC</option>
-                <option>Geothermal Exploration</option>
-                <option>Responsible Mining</option>
-                <option>Hybrid & Biofuel Solutions</option>
-            </select>
+    <!-- Quote Form -->
+<form id="quoteForm" action="https://formsubmit.co/info@stanchion.ng" method="POST" class="space-y-4">
 
+    <!-- FormSubmit settings -->
+    <input type="hidden" name="_next" value="https://stanchion.ng/thank-you.html">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Quote Request from Stanchion Energy Website">
 
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-gray-950">Additional Details</label>
-                <textarea name="message" rows="4"
-                    class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm"></textarea>
-            </div>
-
-            <button type="submit"
-                class="w-full py-3 bg-orange-500 text-white rounded-lg shadow hover:bg-orange-400 transition text-sm sm:text-base">
-                Submit Request
-            </button>
-        </form>
+    <div>
+        <label class="block text-sm font-medium text-gray-950">Full Name</label>
+        <input type="text" name="name" required
+            class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
     </div>
+
+    <div>
+        <label class="block text-sm font-medium text-gray-950">Email</label>
+        <input type="email" name="email" required
+            class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
+    </div>
+
+    <div>
+        <label class="block text-sm font-medium text-gray-950">Phone</label>
+        <input type="tel" name="phone"
+            class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
+    </div>
+
+    <div>
+        <label class="block text-sm font-medium text-gray-950">Service Interested In</label>
+        <select name="service" required
+            class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-700 text-sm text-gray-900">
+            <option value="">Select a service</option>
+            <option>LPG Distribution</option>
+            <option>Solar EPC</option>
+            <option>Geothermal Exploration</option>
+            <option>Responsible Mining</option>
+            <option>Hybrid & Biofuel Solutions</option>
+        </select>
+    </div>
+
+    <div>
+        <label class="block text-sm font-medium text-gray-950">Additional Details</label>
+        <textarea name="message" rows="4"
+            class="w-full mt-1 px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm"></textarea>
+    </div>
+
+    <button type="submit"
+        class="w-full py-3 bg-orange-500 text-white rounded-lg shadow hover:bg-orange-400 transition text-sm sm:text-base">
+        Submit Request
+    </button>
+</form>
+</div>
 </div>
 
 <!-- JavaScript -->
@@ -188,25 +196,55 @@ toggleBtn.addEventListener('click', () => {
 <section id="projects" class="bg-gray-950 py-20 px-6">
   <div class="max-w-6xl mx-auto text-center">
     <h3 class="text-3xl font-bold mb-10 text-orange-500">Featured Projects</h3>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-orange-600 rounded-lg p-4 shadow hover:shadow-xl transition">
-        <img src="assets/solar.jpg" alt="Solar Farm" class="rounded mb-4">
-        <h4 class="text-white font-semibold text-lg">Solar Power Plant</h4>
-        <p class="text-white text-sm mt-1">Lagos, Nigeria – 5MW solar installation powering 200+ homes.</p>
+
+    <div class="grid md:grid-cols-3 gap-8 justify-items-center">
+      <div class="bg-orange-600 rounded-lg p-4 shadow hover:shadow-xl transition w-full max-w-sm">
+        <img src="assets/lpg.jpg" alt="Solar Farm" class="rounded mb-4">
+        <h4 class="text-white font-semibold text-lg">LPG Distribution</h4>
+        <p class="text-white text-sm mt-1">
+          Our supply chain is built on safety, affordability, and timely delivery, ensuring that customers have uninterrupted access to clean energy.
+        </p>
       </div>
-      <div class="bg-gray-800 rounded-lg p-4 shadow hover:shadow-xl transition">
-        <img src="assets/project2.jpg" alt="Mining Site" class="rounded mb-4">
-        <h4 class="text-white font-semibold text-lg">Gold Mining Initiative</h4>
-        <p class="text-gray-400 text-sm mt-1">Kano State – Environmentally safe extraction processes.</p>
+
+      <div class="bg-gray-800 rounded-lg p-4 shadow hover:shadow-xl transition w-full max-w-sm">
+        <img src="assets/panels.jpg" alt="Mining Site" class="rounded mb-4">
+        <h4 class="text-white font-semibold text-lg">Solar EPC</h4>
+        <p class="text-gray-400 text-sm mt-1">
+          Our expertise ensures optimized system performance, cost efficiency, and long-term reliability.
+        </p>
       </div>
-      <div class="bg-gray-800 rounded-lg p-4 shadow hover:shadow-xl transition">
-        <img src="assets/project3.jpg" alt="Wind turbines" class="rounded mb-4">
-        <h4 class="text-white font-semibold text-lg">Wind Farm Design</h4>
-        <p class="text-gray-400 text-sm mt-1">Jos Plateau – Hybrid wind-energy feasibility consulting.</p>
+
+      <div class="bg-gray-800 rounded-lg p-4 shadow hover:shadow-xl transition w-full max-w-sm">
+        <img src="assets/ecv.jpeg" alt="Wind turbines" class="rounded mb-4">
+        <h4 class="text-white font-semibold text-lg">Geothermal Exploration</h4>
+        <p class="text-gray-400 text-sm mt-1">
+          Stanchion Energy is committed to unlocking the potential of geothermal resources through advanced exploration techniques.
+        </p>
       </div>
+
+      <!-- ✅ Center the last two cards on md+ -->
+      <div class="md:col-span-3 w-full flex flex-col items-center gap-8 md:flex-row md:justify-center">
+        <div class="bg-gray-800 rounded-lg p-4 shadow hover:shadow-xl transition w-full max-w-sm">
+          <img src="assets/gold.jpeg" alt="Mining Site" class="rounded mb-4">
+          <h4 class="text-white font-semibold text-lg">Responsible Mining</h4>
+          <p class="text-gray-400 text-sm mt-1">
+            We adopt modern mining practices that minimize ecological impact, ensure worker safety, and promote social and economic development in host communities.
+          </p>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg p-4 shadow hover:shadow-xl transition w-full max-w-sm">
+          <img src="assets/mine.jpeg" alt="Wind turbines" class="rounded mb-4">
+          <h4 class="text-white font-semibold text-lg">Hybrid &amp; Biofuel Solutions</h4>
+          <p class="text-gray-400 text-sm mt-1">
+            By integrating advanced hybrid technologies with sustainable biofuels, we provide efficient alternatives that reduce carbon emissions while ensuring reliability and performance.
+          </p>
+        </div>
+      </div>
+      <!-- ✅ /centered pair -->
     </div>
   </div>
 </section>
+
 
  <!-- CORE VALUES -->
 <section class="bg-gray-100 py-20 px-6">
@@ -249,16 +287,30 @@ toggleBtn.addEventListener('click', () => {
   <div class="max-w-4xl mx-auto text-center">
     <h3 class="text-3xl font-bold text-orange-500 mb-6">Get In Touch</h3>
     <p class="text-gray-300 mb-10">Let’s talk about how Stanchion Energy can power your business.</p>
-    <form class="grid md:grid-cols-2 gap-6">
-      <input type="text" placeholder="Your Name" class="p-3 rounded bg-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-yellow-500">
-      <input type="email" placeholder="Your Email" class="p-3 rounded bg-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-yellow-500">
-      <textarea placeholder="Your Message" rows="4" class="p-3 md:col-span-2 rounded bg-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
-      <button type="submit" class="md:col-span-2 bg-orange-500 text-black py-3 px-6 rounded hover:bg-yellow-600 transition font-semibold">
+    
+    <!-- Replace YOUR_EMAIL with your actual email -->
+    <form action="https://formsubmit.co/info@stanchion.ng" method="POST" class="grid md:grid-cols-2 gap-6">
+      
+      <!-- Prevent spam -->
+      <input type="hidden" name="_captcha" value="false">
+      <!-- Redirect after submit -->
+      <input type="hidden" name="_next" value="https://stanchionenergy.ng/thank-you">
+
+      <input type="text" name="name" placeholder="Your Name" required
+        class="p-3 rounded bg-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-yellow-500">
+      <input type="email" name="email" placeholder="Your Email" required
+        class="p-3 rounded bg-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-yellow-500">
+      <textarea name="message" placeholder="Your Message" rows="4" required
+        class="p-3 md:col-span-2 rounded bg-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+      
+      <button type="submit"
+        class="md:col-span-2 bg-orange-500 text-black py-3 px-6 rounded hover:bg-yellow-600 transition font-semibold">
         Send Message
       </button>
     </form>
   </div>
 </section>
+
 
 <footer class="bg-gray-950 text-gray-400 py-10 px-6">
   <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
