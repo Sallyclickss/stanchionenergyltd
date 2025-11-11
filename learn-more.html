@@ -11,6 +11,7 @@
   <link rel="manifest" href="/site.webmanifest">
 </head>
 <body class="bg-black text-white font-sans">
+  
 
   <!-- Hero Section -->
   <section class="bg-gradient-to-r from-orange-600 to-yellow-500 text-black py-24 px-6 text-center">
@@ -18,7 +19,7 @@
     <p class="max-w-2xl mx-auto text-lg">Insights, news, and stories from the frontlines of energy, mining, and sustainable development.</p>
   </section>
 
-  <!-- Section 2: Featured Services -->
+  <!-- Featured Services -->
    
   <section class="px-6 md:px-16 py-20 bg-white">
     <h3 class="text-2xl md:text-3xl font-bold mb-10 text-center text-gray-700">
@@ -48,30 +49,30 @@
     </div>
   </section>
 
-  <!-- Section 3: Newsletter Signup -->
-  <section class="px-6 md:px-16 py-16 bg-gradient-to-r from-orange-600 to-yellow-500 text-white">
-    <div class="max-w-3xl mx-auto text-center">
-      <h3 class="text-2xl md:text-3xl font-bold mb-4">Subscribe to Our Newsletter</h3>
-      <p class="mb-6">Stay updated with our latest innovations, project launches, and energy insights.</p>
+<form action="https://formsubmit.co/info@stanchion.ng" method="POST" class="flex flex-col sm:flex-row gap-4 justify-center">
+  <!--  prevent spam -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://stanchion.ng/thank-you.html">
 
-      <form class="flex flex-col sm:flex-row gap-4 justify-center">
-        <input
-          type="email"
-          placeholder="Enter your email"
-          class="px-4 py-2 rounded text-green-800 focus:outline-none w-full sm:w-2/3"
-          required
-        />
-        <button
-          type="submit"
-          class="bg-white text-gray-700 font-semibold px-6 py-2 rounded hover:bg-green-100 transition"
-        >
-          Subscribe
-        </button>
-      </form>
+  <input
+    type="email"
+    name="email"
+    placeholder="Enter your email"
+    class="px-4 py-2 rounded text-green-800 focus:outline-none w-full sm:w-2/3"
+    required
+  />
+  <button
+    type="submit"
+    class="bg-white text-gray-700 font-semibold px-6 py-2 rounded hover:bg-green-100 transition"
+  >
+    Subscribe
+  </button>
+</form>
 
-      <!-- Optional loading or success animation message area -->
+
+      <!-- loading & success animation message area -->
       <div id="newsletter-status" class="mt-4 text-sm text-white hidden">
-        <!-- JS can toggle visibility and inject status messages -->
+        
       </div>
     </div>
   </section>
